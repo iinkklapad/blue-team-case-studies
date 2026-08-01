@@ -23,9 +23,9 @@ Before we proceed, deploy the attached machine by clicking the Start Machine but
 
 The machine will start in a split-screen view. In case the VM is not visible, use the blue Show Split View button at the top-right of the page.
 
-Artefacts
+### Artifacts
 
-For the investigation proper, you will be provided with the following artefacts:
+For the investigation proper, you will be provided with the following artifacts:
 
   - Copy of the phishing email (dump.eml)
   - Powershell Logs from Julianne’s workstation (powershell.json)
@@ -74,7 +74,7 @@ The security team was able to flag the suspicious execution of the attachment, i
 
 You are tasked to analyse and assess the impact of the compromise.
 
-**Investigation Guide**
+### Investigation Guide
 
 Given the initial information, we know that the compromise started with a phishing email. Let’s start with analysing the **dump.eml** file located in the artefacts directory. There are two ways to analyse the headers and rebuild the attachment:
 
@@ -104,7 +104,7 @@ Once the payload from the encrypted archive is extracted, use lnkparse to extrac
 
 <br />
 
-**Answer the questions below**
+### Answer the questions below
 
 <br />
 
@@ -165,7 +165,7 @@ Based on the initial findings, we discovered how the malicious attachment compro
   - A PowerShell command was executed.
   - Decoding the payload reveals the starting point of endpoint activities.
 
-**Investigation Guide**
+### Investigation Guide
 
 With the following discoveries, we should now proceed with analysing the PowerShell logs to uncover the potential impact of the attack:
 
@@ -193,7 +193,7 @@ The following command will filter only the fields in the file which I find helpf
 
 <br/>
 
-**Answer the questions below**
+### Answer the questions below
 
 <br />
 
@@ -276,7 +276,7 @@ Based on the PowerShell logs investigation, we have seen the full impact of the 
   - The threat actor was able to read and exfiltrate two potentially sensitive files.
   - The domains and ports used for the network activity were discovered, including the tool used by the threat actor for exfiltration.
 
-**Investigation Guide**
+### Investigation Guide
 
 Finally, we can complete the investigation by understanding the network traffic caused by the attack:
 
@@ -287,7 +287,7 @@ Finally, we can complete the investigation by understanding the network traffic 
 
 <br />
 
-**Answer the questions below**
+### Answer the questions below
 
 <br />
 
