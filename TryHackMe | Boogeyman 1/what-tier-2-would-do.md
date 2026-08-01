@@ -158,7 +158,7 @@ MITRE
 
 <br /><br />
 
-**Impact Assessment**
+## Impact Assessment
 
 Impact:
 
@@ -178,7 +178,7 @@ Compromise severity: **HIGH**
 
 <br /><br />
 
-**Tier 2 Recommendations**
+## Tier 2 Recommendations
 
 - Isolate workstation.
 
